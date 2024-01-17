@@ -30,7 +30,10 @@ public class LivingEntity : MonoBehaviour, IDamageable
 
     public virtual bool ApplyDamage(DamageMessage damageMessage)
     {
-        if (IsInvulnerabe || damageMessage.damager == gameObject || dead) return false;
+        if (IsInvulnerabe || damageMessage.damager == gameObject || dead)
+        {
+            return false;
+        }
 
         lastDamagedTime = Time.time;
         health -= damageMessage.amount;
