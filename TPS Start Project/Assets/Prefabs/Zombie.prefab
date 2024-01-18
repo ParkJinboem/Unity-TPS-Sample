@@ -610,7 +610,7 @@ MonoBehaviour:
   damage: 30
   attackRadius: 0.5
   fieldOfView: 50
-  viewDistance: 10
+  viewDistance: 100
   patrolSpeed: 3
   targetEntity: {fileID: 0}
   whatIsTarget:

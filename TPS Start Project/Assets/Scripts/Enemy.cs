@@ -40,7 +40,7 @@ public class Enemy : LivingEntity
     private float attackDistance;
     
     public float fieldOfView = 50f;
-    public float viewDistance = 10f;
+    public float viewDistance = 100f;
     public float patrolSpeed = 3f;
     
     public LivingEntity targetEntity;
@@ -171,7 +171,7 @@ public class Enemy : LivingEntity
         {
             if (hasTarget)
             {
-                if(state == State.Patrol)
+                if (state == State.Patrol)
                 {
                     state = State.Tracking;
                     agent.speed = runSpeed;
@@ -182,13 +182,13 @@ public class Enemy : LivingEntity
             {
                 if (targetEntity != null) targetEntity = null;
 
-                if(state != State.Patrol)
+                if (state != State.Patrol)
                 {
                     state = State.Patrol;
                     agent.speed = patrolSpeed;
                 }
 
-                if(agent.remainingDistance <= 1f)
+                if (agent.remainingDistance <= 1f)
                 {
                     var patrolPosition = Utility.GetRandomPointOnNavMesh(transform.position, 20f, NavMesh.AllAreas);
                     agent.SetDestination(patrolPosition);
@@ -196,23 +196,24 @@ public class Enemy : LivingEntity
 
                 var colliders = Physics.OverlapSphere(eyeTransform.position, viewDistance, whatIsTarget);
 
-                foreach(var collider in colliders)
+                foreach (var collider in colliders)
                 {
-                    if(!IsTargetOnSight(collider.transform))
+                    if (!IsTargetOnSight(collider.transform))
                     {
-                        continue;
+                        //continue;
+                        break;
                     }
                     var livingEntity = collider.GetComponent<LivingEntity>();
 
-                    if(livingEntity != null && !livingEntity.dead)
+                    if (livingEntity != null && !livingEntity.dead)
                     {
                         targetEntity = livingEntity;
                         break;
                     }
                 }
             }
-            
-            yield return new WaitForSeconds(0.05f);
+
+            yield return new WaitForSeconds(0.2f);
         }
     }
     
@@ -271,7 +272,8 @@ public class Enemy : LivingEntity
         {
             return false;
         }
-        direction = target.position - eyeTransform.position;
+
+        //direction = target.position - eyeTransform.position;
 
         if(Physics.Raycast(eyeTransform.position, direction, out hit, viewDistance, whatIsTarget))
         {

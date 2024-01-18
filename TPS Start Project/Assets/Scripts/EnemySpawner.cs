@@ -44,6 +44,7 @@ public class EnemySpawner : MonoBehaviour
         for (int i = 0; i < spawnCount; i++)
         {
             var enemyIntensity = Random.Range(0f, 1f);
+            
             CreateEnemy(enemyIntensity);
         }
     }

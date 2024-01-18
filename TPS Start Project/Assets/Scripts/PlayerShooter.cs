@@ -14,7 +14,7 @@ public class PlayerShooter : MonoBehaviour
     public Gun gun;
     public LayerMask excludeTarget;
     
-    private PlayerInput playerInput;
+    private TPSPlayerInput playerInput;
     private Animator playerAnimator;
     private Camera playerCamera;
 
@@ -36,7 +36,7 @@ public class PlayerShooter : MonoBehaviour
     private void Start()
     {
         playerCamera = Camera.main;
-        playerInput = GetComponent<PlayerInput>();
+        playerInput = GetComponent<TPSPlayerInput>();
         playerAnimator = GetComponent<Animator>();
         
     }
@@ -72,14 +72,14 @@ public class PlayerShooter : MonoBehaviour
         UpdateAimTarget();
 
         float angle = playerCamera.transform.eulerAngles.x;
-        if(angle > 270f)
+        if (angle > 270f)
         {
             angle -= 360f;
         }
         angle = angle / 180f * -1f + 0.5f;
         playerAnimator.SetFloat("Angle", angle);
 
-        if(!playerInput.fire && Time.time >= lastFireInputTime + waitingTimeForReleasingAim)
+        if (!playerInput.fire && Time.time >= lastFireInputTime + waitingTimeForReleasingAim)
         {
             aimState = AimState.Idle;
         }

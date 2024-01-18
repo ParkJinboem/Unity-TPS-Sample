@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     private CharacterController characterController;
-    private PlayerInput playerInput;
+    private TPSPlayerInput playerInput;
     private PlayerShooter playerShooter;
     private Animator animator;
 
@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        playerInput = GetComponent<PlayerInput>();
+        playerInput = GetComponent<TPSPlayerInput>();
         followCam = Camera.main;
         characterController = GetComponent<CharacterController>();
     }

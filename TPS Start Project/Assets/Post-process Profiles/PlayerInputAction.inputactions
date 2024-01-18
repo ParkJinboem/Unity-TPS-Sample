@@ -1,0 +1,84 @@
+{
+    "name": "PlayerInputAction",
+    "maps": [
+        {
+            "name": "FreeLookCamera",
+            "id": "9229b9f7-7665-4513-98d2-72eebd0b39c7",
+            "actions": [
+                {
+                    "name": "Look XY",
+                    "type": "Value",
+                    "id": "0ae6176e-2816-4d4a-9663-3e57b9a4f1e7",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8ae18374-c1fe-4c94-bc4d-95ddb1bf2a1e",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look XY",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fc6caa4c-5ac0-4a46-bd54-619dc0bd8586",
+                    "path": "<Touchscreen>/primaryTouch/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look XY",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Screen",
+            "id": "62c91508-e1cc-4b89-8e4d-ffe7e38ad299",
+            "actions": [
+                {
+                    "name": "Press",
+                    "type": "Button",
+                    "id": "d631b94b-19ae-462d-8793-431241b5a0b5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5712d1c8-03b9-48b3-8134-df6e8c59d9a9",
+                    "path": "<Mouse>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9f6960a8-af97-410c-aed3-92352d789978",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
