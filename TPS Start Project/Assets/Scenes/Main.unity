@@ -411,7 +411,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199868541}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0005184221, y: -0.094362415, z: 0.000049138736, w: 0.9955378}
+  m_LocalRotation: {x: 0.00051699806, y: -0.11975735, z: 0.000062363, w: 0.9928031}
   m_LocalPosition: {x: -11.54, y: 1.5, z: -8.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -833,7 +833,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346935309}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0005184285, y: -0.09436241, z: 0.00004913944, w: 0.9955378}
+  m_LocalRotation: {x: 0.00051700533, y: -0.11975734, z: 0.00006236401, w: 0.9928031}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -912,7 +912,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362322829}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.007501448, y: 0.19355321, z: 0.0014799598, w: 0.98106}
+  m_LocalRotation: {x: -0.0074234386, y: 0.23953572, z: 0.0018315549, w: 0.97085744}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1087,7 +1087,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &702582604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1095,7 +1095,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702582603}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
@@ -1377,7 +1377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906648723}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.062400404, y: 0.19316697, z: 0.012310969, w: 0.97910225}
+  m_LocalRotation: {x: -0.06175147, y: 0.2390577, z: 0.015235688, w: 0.96892005}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16984,6 +16984,11 @@ PrefabInstance:
       propertyPath: cinemachineInputProvider
       value: 
       objectReference: {fileID: 1923901912}
+    - target: {fileID: 3935932817619369175, guid: e3ff3c636429a4e6c8d3def3f6b5c865,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.14
+      objectReference: {fileID: 0}
     - target: {fileID: 5299933734416373314, guid: e3ff3c636429a4e6c8d3def3f6b5c865,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17042,7 +17047,7 @@ PrefabInstance:
     - target: {fileID: 6622575586029422637, guid: e3ff3c636429a4e6c8d3def3f6b5c865,
         type: 3}
       propertyPath: speed
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
