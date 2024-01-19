@@ -282,9 +282,7 @@ public class Enemy : LivingEntity
                 return true;
             }
         }
-
-
-            return false;
+        return false;
     }
     
     public override void Die()
