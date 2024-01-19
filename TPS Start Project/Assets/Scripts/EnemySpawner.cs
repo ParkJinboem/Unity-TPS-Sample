@@ -10,8 +10,8 @@ public class EnemySpawner : MonoBehaviour
     public float damageMin = 20f;
     public Enemy enemyPrefab;
 
-    public float healthMax = 200f;
-    public float healthMin = 100f;
+    public float healthMax = 120f;
+    public float healthMin = 50f;
 
     public Transform[] spawnPoints;
 
@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance != null && GameManager.Instance.isGameover) return;
+        if (GameManager.Instance != null && GameManager.Instance.isGameover && !GameManager.Instance.isGamestart) return;
         
         if (enemies.Count <= 0) SpawnWave();
         
@@ -39,7 +39,7 @@ public class EnemySpawner : MonoBehaviour
     {
         wave++;
 
-        var spawnCount = Mathf.RoundToInt(wave * 5f);
+        var spawnCount = Mathf.RoundToInt(wave * 2f);
 
         for (int i = 0; i < spawnCount; i++)
         {

@@ -16,10 +16,12 @@ public class GameManager : MonoBehaviour
 
     private int score;
     public bool isGameover { get; private set; }
+    public bool isGamestart { get; private set; }
 
     private void Awake()
     {
         if (Instance != this) Destroy(gameObject);
+        isGamestart = false;
     }
     
     public void AddScore(int newScore)
@@ -35,5 +37,10 @@ public class GameManager : MonoBehaviour
     {
         isGameover = true;
         UIManager.Instance.SetActiveGameoverUI(true);
+    }
+
+    public void StartGame()
+    {
+        isGamestart = true;
     }
 }

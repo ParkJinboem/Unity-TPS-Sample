@@ -28,7 +28,7 @@ public class TPSPlayerInput : MonoBehaviour
     }
     private void Update()
     {
-        if (GameManager.Instance != null && GameManager.Instance.isGameover)
+        if (GameManager.Instance != null && GameManager.Instance.isGameover && !GameManager.Instance.isGamestart)
         {
             moveInput = Vector2.zero;
             fire = false;

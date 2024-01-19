@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class UICanvasPlayerInputs : MonoBehaviour
 {
-
     [Header("Output")]
     public TPSPlayerInput tpsPlayerInput;
 

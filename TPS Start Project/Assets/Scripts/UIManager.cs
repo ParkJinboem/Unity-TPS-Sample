@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
     }
 
     [SerializeField] private GameObject gameoverUI;
+    [SerializeField] private GameObject gamestartUI;
     [SerializeField] private Crosshair crosshair;
 
     [SerializeField] private Text healthText;
@@ -68,5 +69,12 @@ public class UIManager : MonoBehaviour
     public void GameRestart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void GameStart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameManager.Instance.StartGame();
+        gamestartUI.SetActive(false);
     }
 }
